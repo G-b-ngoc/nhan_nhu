@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nạp năng lượng cho siêu bạn thân ⚡</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Thư viện tạo hiệu ứng pháo hoa -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- Background Gradient Animation -->
+    <div class="bg-animated"></div>
+
+    <!-- Màn hình mở đầu -->
+    <div id="intro-screen" class="screen active">
+        <div class="glass-panel text-center">
+            <div class="glowing-heart">💖</div>
+            <h1 class="title">BẠN ƠI!</h1>
+            <p class="subtitle">Dậy chưa?</p>
+            <button id="btn-start" class="btn primary-btn pulse-anim">NHẮN NHỦ</button>
+        </div>
+    </div>
+
+    <!-- Màn hình chính (Lời chúc) -->
+    <div id="main-screen" class="screen hidden">
+        <div class="glass-panel main-panel">
+            <div class="wish-container">
+                <p id="wish-text"></p>
+            </div>
+<!--             
+            <div class="action-grid">
+                <button id="btn-energy" class="btn secondary-btn">Nạp thêm năng lượng ⚡</button>
+                <button id="btn-hug" class="btn secondary-btn">Nhận 50 câu hỏi HTML</button>
+                <button id="btn-party" class="btn secondary-btn"></button>
+                <button id="btn-secret" class="btn secondary-btn">Một lời nhắn bí mật 💌</button>
+            </div> -->
+            
+            <div class="footer-actions">
+                <!-- <button id="btn-music" class="btn icon-btn">🎵 Bật nhạc</button>
+                <button id="btn-replay" class="btn icon-btn">↻ Chơi lại từ đầu</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lời nhắn bí mật -->
+    <div id="secret-modal" class="modal hidden">
+        <div class="envelope">
+            <div class="envelope-content">
+                <h3>Gửi chiến hữu! 💌</h3>
+                <p>Dù cả thế giới có quay lưng lại với cậu, thì tớ vẫn sẽ ở đây... để cười vào mặt cậu trước đã rồi mới giúp nha! 😂 Đùa thôi, mãi bên nhau bạn nhé, cố lên! ❤️</p>
+                <button id="btn-close-modal" class="btn small-btn">Đóng lại</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container chứa các hiệu ứng bay lên (tym, chữ) -->
+    <div id="floating-container"></div>
+
+    <!-- Nhạc nền (Sử dụng nhạc không bản quyền vui tươi) -->
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/02/22/audio_d1718ab41b.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
